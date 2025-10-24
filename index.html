@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Crop Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div class="branding">
+      <img src="https://www.svkm-iot.ac.in/wp-content/uploads/2017/12/SVKM-Logo.png" alt="Smart Crop Logo" class="logo">
+      <h1 id="site-title">Team Origin</h1>
+      <p class="tagline" id="site-tagline">Empowering farmers with smart insights</p>
+    </div>
+    <section id="login-section">
+      <button onclick="location.href='farmer-login.html'" class="login-btn" id="farmer-login-btn">Farmer Login</button>
+      <button onclick="location.href='vendor-login.html'" class="login-btn" id="vendor-login-btn" style="margin-left: 15px;">Vendor Login</button>
+      <div style="margin-top:18px; margin-bottom:5px;">
+        <select id="language-select" style="padding: 6px 18px; border-radius: 6px; border: 1px solid #aaa; background: #f8f8f8; font-size: 0.92rem; color: #3b6c2b; min-width: 130px;">
+          <option value="en">Select Language</option>
+          <option value="en">English</option>
+          <option value="hi">Hindi / हिन्दी</option>
+          <option value="mr">Marathi / मराठी</option>
+          <option value="bn">Bengali / বাংলা</option>
+          <option value="ta">Tamil / தமிழ்</option>
+          <option value="te">Telugu / తెలుగు</option>
+          <option value="ml">Malayalam / മലയാളം</option>
+          <option value="gu">Gujarati / ગુજરાતી</option>
+          <option value="pa">Punjabi / ਪੰਜਾਬੀ</option>
+          <option value="kn">Kannada / ಕನ್ನಡ</option>
+          <option value="or">Odia / ଓଡ଼ିଆ</option>
+          <option value="ur">Urdu / اُردُو</option>
+        </select>
+      </div>
+      <div class="note" style="margin-top: 14px; font-size: 0.98rem" id="register-text">New user? <a href="register.html">Register here</a></div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
