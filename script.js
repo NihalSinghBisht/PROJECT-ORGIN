@@ -201,4 +201,36 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   updateTexts(lang);
+
+  // Only attach to farmer-login.html form
+  if (window.location.pathname.endsWith('farmer-login.html')) {
+    var form = document.querySelector('.login-form');
+    var usernameInput = document.getElementById('farmer-username');
+    var passwordInput = document.getElementById('farmer-password');
+    // make or reuse error div
+    var errorDiv = document.getElementById('farmer-login-error');
+    if (!errorDiv) {
+      errorDiv = document.createElement('div');
+      errorDiv.id = 'farmer-login-error';
+      errorDiv.style.color = '#d32f2f';
+      errorDiv.style.fontSize = '0.95em';
+      errorDiv.style.marginTop = '8px';
+      errorDiv.style.marginBottom = '2px';
+      form.insertBefore(errorDiv, form.querySelector('.note'));
+    }
+    errorDiv.style.display = 'none';
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (
+        usernameInput.value === 'FARMER1' &&
+        passwordInput.value === 'teamorigin'
+      ) {
+        window.location.href = 'main.html';
+      } else {
+        errorDiv.textContent = 'Incorrect username or password.';
+        errorDiv.style.display = 'block';
+      }
+    });
+  }
 });
